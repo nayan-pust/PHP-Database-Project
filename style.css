@@ -1,0 +1,37 @@
+body
+{
+ background-color: aliceblue;
+ overflow: hidden;
+}
+
+#form
+{
+    background-color: aqua;
+    width: 18%;
+    border-radius: 12px;
+    margin: 120px auto;
+    padding: 50px;
+    box-shadow: 10px 10px 5px rgb( 82,11,77);
+}
+#div2
+{
+    background-color: rgb(255, 145, 0);
+    width: 10%;
+    border-radius: 9px;
+
+}
+#out{
+    font-size: large;
+    background-color: rgb(0, 255, 4);
+    width: 10%;
+    border-radius: 9px;  
+}
+
+#cls
+{
+    font-size: large;
+    background-color: rgb(0, 255, 4);
+    width: 10%;
+    border-radius: 9px;  
+
+}
