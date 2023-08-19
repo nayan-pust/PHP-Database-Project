@@ -36,7 +36,11 @@
                     <i class="fa-solid fa-lock"></i>
                     <input type="password" name="pass1" id="pass1" placeholder="Re-type password"required><br>
                     <hr class="mb-3">
-                    <input class="btn btn-primary" type="submit" name="submit" id="submit" value="Submit"><br>
+                    
+                    <div class="check" name="table-check">
+                    <input class="btn btn-primary" type="submit" name="submit" id="submit" value="Submit">
+                       <a href="table.php" class="btn btn-primary">Form Check</a>
+                    </div>
 
                 </form>
 
@@ -60,11 +64,15 @@
                 {
                     $username=$_POST['user'];
                     $email=$_POST['email'];
-                    $pass=$_POST['pass'];
+                    $pass=$_POST['pass']; 
                     $pass1=$_POST['pass1'];
+
+                    //$pass = password_hash($pass,PASSWORD_BCRYPT);
+                   // $pass1 = password_hash($pass1,PASSWORD_BCRYPT);
+
     
                    
-                        $insertquery = "insert into signup1(username,email,pass,pass1) values('$username','$email','$pass','$pass1')";
+                        $insertquery = "insert into signupform(username,email,pass,pass1) values('$username','$email','$pass','$pass1')";
                         $res = mysqli_query($conn,$insertquery);
                         if($res)
                         {
@@ -89,9 +97,11 @@
     
     
             }
+            return;
+        }
 
          
-                if($pass!=$pass1)
+              else
                 {
                     ?>
                     <script>
@@ -104,12 +114,14 @@
     
     
 
-
-            }
             ?>
+
+           
           
 
 
         </body>
-        <td></td>
+        
     </html>
+
+   
